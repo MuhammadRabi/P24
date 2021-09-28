@@ -6,13 +6,19 @@
   }
 }
 
+@mixin mobileandMedium {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
 @mixin mediumScreens {
   @media (min-width: 768px) and (max-width: 991px) {
     @content;
   }
 }
 
-@mixin minMedium {
+@mixin mediumandLarge {
   @media (min-width: 768px) {
     @content;
   }
@@ -24,4 +30,4 @@
   }
 }
 
-// version 1.10
+// version 1.20
