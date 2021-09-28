@@ -109,10 +109,15 @@ button {
 
 .main-heading {
   text-align: left;
+  width: 40%;
   h2 {
     font-size: 40px;
-    width: 45%;
     padding-bottom: 25px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 600;
   }
 }
 
@@ -214,62 +219,66 @@ header {
         font-size: 48px;
       }
     }
-    form {
+
+    .head-contact {
+      position: absolute;
+      bottom: 0;
+      right: 0;
       display: flex;
-      position: relative;
-      &:hover i {
-        transform: rotate(360deg) scale(1.1);
+      justify-content: space-around;
+      align-items: center;
+      font-weight: 600;
+      width: 35%;
+      background-color: var(--yellow-color);
+      color: var(--main-color);
+      padding: 15px 10px;
+      @include mobile {
+        width: 100%;
       }
       i {
-        position: absolute;
-        color: var(--second-color);
-        top: 40%;
-        cursor: pointer;
-        transition: $mainTransition;
+        color: var(--background-white);
+        font-size: 32px;
       }
-      .main-input {
-        padding: 25px 65px 25px 45px;
-        border: 1px solid transparent;
-        outline: none;
-        width: 400px;
-        @include mobile {
-          width: 90%;
-        }
-      }
-      input[type="submit"] {
-        background-color: var(--yellow-color);
-        color: var(--main-color);
-        width: 120px;
-        border: transparent;
-        padding: 25px;
-        cursor: pointer;
-        font-weight: 600;
-        text-transform: capitalize;
-        border-radius: 0 5px 5px 0;
-      }
-    }
-  }
-  .head-contact {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-weight: 600;
-    width: 35%;
-    background-color: var(--yellow-color);
-    color: var(--main-color);
-    padding: 15px 10px;
-    @include mobile {
-      width: 100%;
-    }
-    i {
-      color: var(--background-white);
-      font-size: 32px;
     }
   }
 }
+form {
+  display: flex;
+  position: relative;
+  &:hover i {
+    transform: rotate(360deg) scale(1.1);
+  }
+  i {
+    position: absolute;
+    color: var(--second-color);
+    top: 40%;
+    left: 10px;
+    cursor: pointer;
+    transition: $mainTransition;
+  }
+  .main-input {
+    padding: 25px 65px 25px 45px;
+    border: 1px solid transparent;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 400px;
+    @include mobile {
+      width: 90%;
+    }
+  }
+  input[type="submit"] {
+    background-color: var(--yellow-color);
+    color: var(--main-color);
+    width: 120px;
+    border: transparent;
+    padding: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
 /* end hero area */
 
 /* start stats */
@@ -280,24 +289,120 @@ header {
   main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 100px;
+    .stats-text {
+      p {
+        margin-top: 30px;
+        line-height: 1.5;
+      }
+    }
     .stats-boxes {
+      width: 100%;
       display: grid;
-      grid-template-columns: 150px 150px;
-      justify-content: space-around;
+      grid-template-columns: auto auto;
+      justify-content: center;
       align-items: center;
-      gap: 10px;
-      border: 1px solid red;
+      gap: 50px;
     }
     span {
+      align-content: stretch;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 25px;
-      width: 150px;
-      height: 150px;
+      flex-direction: column;
+      width: 160px;
+      height: 180px;
       background-color: var(--background-dark);
+      h3 {
+        color: var(--yellow-color);
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      h4 {
+        color: var(--main-color);
+      }
     }
   }
 }
 
 /* end stats */
+
+/* start rent */
+.rent {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  background-color: var(--background-dark);
+  .rent-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 35px 30px;
+    margin: 40px 0 60px 0;
+    .rent-box img {
+      height: 400px;
+    }
+  }
+}
+
+/* end rent */
+
+/* start how */
+
+.how {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  .how-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 30px;
+    .how-box {
+      color: var(--main-color);
+      position: relative;
+      margin: 50px 0;
+      padding: 90px 30px 50px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: $mainTransition;
+      box-shadow: 2px 1px 5px 1px;
+      overflow: hidden;
+      &:before {
+        position: absolute;
+        content: "02";
+        top: -40px;
+        left: -20px;
+        color: var(--main-color);
+        transition: $mainTransition;
+        font-size: 96px;
+        font-weight: 800;
+      }
+      &:hover {
+        background-color: var(--yellow-color);
+        color: var(--background-white);
+        &:before {
+          color: var(--background-white);
+        }
+        & a {
+          color: var(--background-white);
+        }
+      }
+      h4 {
+        text-transform: capitalize;
+        padding: 15px 10px;
+        font-size: 18px;
+      }
+      p {
+        padding: 10px 25px 30px;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+      a {
+        display: block;
+        padding-left: 29px;
+        text-transform: capitalize;
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+/* end how */

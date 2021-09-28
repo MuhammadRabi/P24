@@ -114,12 +114,18 @@ button {
 
 .main-heading {
   text-align: left;
+  width: 40%;
 }
 
 .main-heading h2 {
   font-size: 40px;
-  width: 45%;
   padding-bottom: 25px;
+}
+
+.main-heading p {
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 600;
 }
 
 body {
@@ -260,53 +266,7 @@ header nav a.active, header nav a:hover {
   font-size: 48px;
 }
 
-.hero-area .hero-details form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-.hero-area .hero-details form:hover i {
-  -webkit-transform: rotate(360deg) scale(1.1);
-          transform: rotate(360deg) scale(1.1);
-}
-
-.hero-area .hero-details form i {
-  position: absolute;
-  color: var(--second-color);
-  top: 40%;
-  cursor: pointer;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.hero-area .hero-details form .main-input {
-  padding: 25px 65px 25px 45px;
-  border: 1px solid transparent;
-  outline: none;
-  width: 400px;
-}
-
-@media (max-width: 767px) {
-  .hero-area .hero-details form .main-input {
-    width: 90%;
-  }
-}
-
-.hero-area .hero-details form input[type="submit"] {
-  background-color: var(--yellow-color);
-  color: var(--main-color);
-  width: 120px;
-  border: transparent;
-  padding: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  text-transform: capitalize;
-  border-radius: 0 5px 5px 0;
-}
-
-.hero-area .head-contact {
+.hero-area .hero-details .head-contact {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -326,14 +286,62 @@ header nav a.active, header nav a:hover {
 }
 
 @media (max-width: 767px) {
-  .hero-area .head-contact {
+  .hero-area .hero-details .head-contact {
     width: 100%;
   }
 }
 
-.hero-area .head-contact i {
+.hero-area .hero-details .head-contact i {
   color: var(--background-white);
   font-size: 32px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+form:hover i {
+  -webkit-transform: rotate(360deg) scale(1.1);
+          transform: rotate(360deg) scale(1.1);
+}
+
+form i {
+  position: absolute;
+  color: var(--second-color);
+  top: 40%;
+  left: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+form .main-input {
+  padding: 25px 65px 25px 45px;
+  border: 1px solid transparent;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  width: 400px;
+}
+
+@media (max-width: 767px) {
+  form .main-input {
+    width: 90%;
+  }
+}
+
+form input[type="submit"] {
+  background-color: var(--yellow-color);
+  color: var(--main-color);
+  width: 120px;
+  border: transparent;
+  padding: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 0 5px 5px 0;
 }
 
 /* end hero area */
@@ -348,23 +356,32 @@ header nav a.active, header nav a:hover {
   display: grid;
   -ms-grid-columns: (minmax(500px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 100px;
+}
+
+.stats main .stats-text p {
+  margin-top: 30px;
+  line-height: 1.5;
 }
 
 .stats main .stats-boxes {
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 150px 150px;
-      grid-template-columns: 150px 150px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  border: 1px solid red;
+  gap: 50px;
 }
 
 .stats main span {
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,11 +391,127 @@ header nav a.active, header nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 25px;
-  width: 150px;
-  height: 150px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 160px;
+  height: 180px;
   background-color: var(--background-dark);
 }
 
+.stats main span h3 {
+  color: var(--yellow-color);
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.stats main span h4 {
+  color: var(--main-color);
+}
+
 /* end stats */
+/* start rent */
+.rent {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--background-dark);
+}
+
+.rent .rent-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 35px 30px;
+  margin: 40px 0 60px 0;
+}
+
+.rent .rent-items .rent-box img {
+  height: 400px;
+}
+
+/* end rent */
+/* start how */
+.how {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.how .how-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(275px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 30px;
+}
+
+.how .how-items .how-box {
+  color: var(--main-color);
+  position: relative;
+  margin: 50px 0;
+  padding: 90px 30px 50px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-box-shadow: 2px 1px 5px 1px;
+          box-shadow: 2px 1px 5px 1px;
+  overflow: hidden;
+}
+
+.how .how-items .how-box:before {
+  position: absolute;
+  content: "02";
+  top: -40px;
+  left: -20px;
+  color: var(--main-color);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  font-size: 96px;
+  font-weight: 800;
+}
+
+.how .how-items .how-box:hover {
+  background-color: var(--yellow-color);
+  color: var(--background-white);
+}
+
+.how .how-items .how-box:hover:before {
+  color: var(--background-white);
+}
+
+.how .how-items .how-box:hover a {
+  color: var(--background-white);
+}
+
+.how .how-items .how-box h4 {
+  text-transform: capitalize;
+  padding: 15px 10px;
+  font-size: 18px;
+}
+
+.how .how-items .how-box p {
+  padding: 10px 25px 30px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.how .how-items .how-box a {
+  display: block;
+  padding-left: 29px;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* end how */
 /*# sourceMappingURL=style.css.map */
