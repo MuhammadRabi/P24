@@ -266,7 +266,7 @@ header nav a.active, header nav a:hover {
   font-size: 48px;
 }
 
-.hero-area .hero-details .head-contact {
+.hero-area .head-contact {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -286,12 +286,12 @@ header nav a.active, header nav a:hover {
 }
 
 @media (max-width: 767px) {
-  .hero-area .hero-details .head-contact {
+  .hero-area .head-contact {
     width: 100%;
   }
 }
 
-.hero-area .hero-details .head-contact i {
+.hero-area .head-contact i {
   color: var(--background-white);
   font-size: 32px;
 }
@@ -463,20 +463,31 @@ form input[type="submit"] {
           justify-content: center;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: 2px 1px 5px 1px;
-          box-shadow: 2px 1px 5px 1px;
+  -webkit-box-shadow: 1px 1px 10px 1px #eeeff1;
+          box-shadow: 1px 1px 10px 1px #eeeff1;
   overflow: hidden;
+}
+
+.how .how-items .how-box:nth-of-type(1):before {
+  content: "01";
+}
+
+.how .how-items .how-box:nth-of-type(2):before {
+  content: "02";
+}
+
+.how .how-items .how-box:nth-of-type(3):before {
+  content: "03";
 }
 
 .how .how-items .how-box:before {
   position: absolute;
-  content: "02";
-  top: -40px;
-  left: -20px;
+  top: -62px;
+  left: -45px;
   color: var(--main-color);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  font-size: 96px;
+  font-size: 140px;
   font-weight: 800;
 }
 
@@ -514,4 +525,41 @@ form input[type="submit"] {
 }
 
 /* end how */
+/* start services */
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.services .service-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+/* end services */
+/* start agent */
+.agents .agent-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.agents .agent-items .agent-box img {
+  height: 400px;
+}
+
+/* end agent */
 /*# sourceMappingURL=style.css.map */

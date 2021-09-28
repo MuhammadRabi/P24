@@ -219,26 +219,25 @@ header {
         font-size: 48px;
       }
     }
-
-    .head-contact {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      font-weight: 600;
-      width: 35%;
-      background-color: var(--yellow-color);
-      color: var(--main-color);
-      padding: 15px 10px;
-      @include mobile {
-        width: 100%;
-      }
-      i {
-        color: var(--background-white);
-        font-size: 32px;
-      }
+  }
+  .head-contact {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 600;
+    width: 35%;
+    background-color: var(--yellow-color);
+    color: var(--main-color);
+    padding: 15px 10px;
+    @include mobile {
+      width: 100%;
+    }
+    i {
+      color: var(--background-white);
+      font-size: 32px;
     }
   }
 }
@@ -363,16 +362,25 @@ form {
       flex-direction: column;
       justify-content: center;
       transition: $mainTransition;
-      box-shadow: 2px 1px 5px 1px;
+      box-shadow: 1px 1px 10px 1px #eeeff1;
       overflow: hidden;
+      &:nth-of-type(1):before {
+        content: "01";
+      }
+      &:nth-of-type(2):before {
+        content: "02";
+      }
+      &:nth-of-type(3):before {
+        content: "03";
+      }
       &:before {
         position: absolute;
-        content: "02";
-        top: -40px;
-        left: -20px;
+        top: -62px;
+        left: -45px;
         color: var(--main-color);
-        transition: $mainTransition;
-        font-size: 96px;
+        -webkit-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        font-size: 140px;
         font-weight: 800;
       }
       &:hover {
@@ -406,3 +414,32 @@ form {
   }
 }
 /* end how */
+
+/* start services */
+.services {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  .service-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 50px;
+  }
+}
+/* end services */
+
+/* start agent */
+.agents {
+  .agent-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+    .agent-box img {
+      height: 400px;
+    }
+  }
+}
+/* end agent */
