@@ -112,13 +112,21 @@ button {
   width: 40%;
   h2 {
     font-size: 40px;
-    padding-bottom: 25px;
   }
   p {
     font-size: 13px;
     line-height: 1.6;
     font-weight: 600;
   }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 25px;
+  text-transform: capitalize;
 }
 
 body {
@@ -261,6 +269,9 @@ form {
     border-radius: 5px 0 0 5px;
     outline: none;
     width: 400px;
+    &:focus {
+      outline: none;
+    }
     @include mobile {
       width: 90%;
     }
@@ -315,7 +326,6 @@ form {
       h3 {
         color: var(--yellow-color);
         font-size: 28px;
-        margin-bottom: 10px;
       }
       h4 {
         color: var(--main-color);
@@ -337,7 +347,6 @@ form {
     gap: 35px 30px;
     margin: 40px 0 60px 0;
     .rent-box img {
-      height: 400px;
     }
   }
 }
@@ -425,21 +434,118 @@ form {
     justify-content: space-between;
     gap: 50px;
     margin-top: 50px;
+    .service-text p {
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
   }
 }
 /* end services */
 
 /* start agent */
 .agents {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  background-color: var(--background-dark);
   .agent-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    justify-content: space-between;
+    justify-content: center;
     gap: 30px;
     margin-top: 50px;
-    .agent-box img {
-      height: 400px;
-    }
   }
 }
 /* end agent */
+/* start add */
+.add {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    &:nth-of-type(2) {
+      flex-direction: row-reverse;
+    }
+    .img-box {
+      flex-basis: 45%;
+    }
+    .text-box {
+      flex-basis: 45%;
+      h3 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.8;
+      }
+    }
+  }
+}
+
+/* end add*/
+
+/* footer */
+footer {
+  padding-top: $sectionPadding;
+  background-color: var(--main-color);
+  color: var(--background-white);
+  height: 500px;
+  .hero-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 100px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -50px;
+      left: 0;
+      background-color: var(--second-color);
+    }
+  }
+  form {
+    i {
+      right: 25px;
+    }
+    .main-input {
+      width: 450px;
+      padding: 15px 45px 15px 25px;
+    }
+  }
+  .footer-lists {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+      font-size: 25px;
+      font-weight: 400;
+      text-transform: lowercase;
+    }
+    main {
+      flex-basis: 1;
+      &:nth-of-type(1) {
+        flex-basis: 30%;
+        p {
+          font-size: 13px;
+        }
+      }
+      h5 {
+        color: var(--second-color);
+        text-transform: uppercase;
+      }
+      a {
+        display: block;
+        font-size: 13px;
+        text-transform: capitalize;
+        color: var(--background-white);
+        padding: 10px 0;
+      }
+    }
+  }
+}
+/* footer */

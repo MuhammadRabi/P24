@@ -119,13 +119,21 @@ button {
 
 .main-heading h2 {
   font-size: 40px;
-  padding-bottom: 25px;
 }
 
 .main-heading p {
   font-size: 13px;
   line-height: 1.6;
   font-weight: 600;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 25px;
+  text-transform: capitalize;
 }
 
 body {
@@ -326,6 +334,10 @@ form .main-input {
   width: 400px;
 }
 
+form .main-input:focus {
+  outline: none;
+}
+
 @media (max-width: 767px) {
   form .main-input {
     width: 90%;
@@ -403,7 +415,6 @@ form input[type="submit"] {
 .stats main span h3 {
   color: var(--yellow-color);
   font-size: 28px;
-  margin-bottom: 10px;
 }
 
 .stats main span h4 {
@@ -425,10 +436,6 @@ form input[type="submit"] {
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 35px 30px;
   margin: 40px 0 60px 0;
-}
-
-.rent .rent-items .rent-box img {
-  height: 400px;
 }
 
 /* end rent */
@@ -543,23 +550,161 @@ form input[type="submit"] {
   margin-top: 50px;
 }
 
+.services .service-content .service-text p {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
 /* end services */
 /* start agent */
+.agents {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--background-dark);
+}
+
 .agents .agent-items {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
   margin-top: 50px;
 }
 
-.agents .agent-items .agent-box img {
-  height: 400px;
+/* end agent */
+/* start add */
+.add {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-/* end agent */
+.add main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.add main:nth-of-type(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.add main .img-box {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.add main .text-box {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.add main .text-box h3 {
+  font-size: 25px;
+}
+
+.add main .text-box p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* end add*/
+/* footer */
+footer {
+  padding-top: 50px;
+  background-color: var(--main-color);
+  color: var(--background-white);
+  height: 500px;
+}
+
+footer .hero-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+footer .hero-footer:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -50px;
+  left: 0;
+  background-color: var(--second-color);
+}
+
+footer form i {
+  right: 25px;
+}
+
+footer form .main-input {
+  width: 450px;
+  padding: 15px 45px 15px 25px;
+}
+
+footer .footer-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-lists h4 {
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+footer .footer-lists main {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+}
+
+footer .footer-lists main:nth-of-type(1) {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+footer .footer-lists main:nth-of-type(1) p {
+  font-size: 13px;
+}
+
+footer .footer-lists main h5 {
+  color: var(--second-color);
+  text-transform: uppercase;
+}
+
+footer .footer-lists main a {
+  display: block;
+  font-size: 13px;
+  text-transform: capitalize;
+  color: var(--background-white);
+  padding: 10px 0;
+}
+
+/* footer */
 /*# sourceMappingURL=style.css.map */
