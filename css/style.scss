@@ -461,7 +461,7 @@ form {
 .add {
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;
-  main {
+  article {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -469,7 +469,7 @@ form {
     &:nth-of-type(2) {
       flex-direction: row-reverse;
     }
-    .img-box {
+    figure {
       flex-basis: 45%;
     }
     .text-box {
