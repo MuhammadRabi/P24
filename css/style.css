@@ -679,26 +679,26 @@ footer .footer-lists h4 {
   text-transform: lowercase;
 }
 
-footer .footer-lists main {
+footer .footer-lists .footer-sec {
   -ms-flex-preferred-size: 1;
       flex-basis: 1;
 }
 
-footer .footer-lists main:nth-of-type(1) {
+footer .footer-lists .footer-sec:nth-of-type(1) {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
 }
 
-footer .footer-lists main:nth-of-type(1) p {
+footer .footer-lists .footer-sec:nth-of-type(1) p {
   font-size: 13px;
 }
 
-footer .footer-lists main h5 {
+footer .footer-lists .footer-sec h5 {
   color: var(--second-color);
   text-transform: uppercase;
 }
 
-footer .footer-lists main a {
+footer .footer-lists .footer-sec a {
   display: block;
   font-size: 13px;
   text-transform: capitalize;
