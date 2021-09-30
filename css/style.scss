@@ -346,7 +346,43 @@ form {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 35px 30px;
     margin: 40px 0 60px 0;
-    .rent-box img {
+    figure {
+      position: relative;
+      display: flex;
+      figcaption {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 1);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 17%;
+        padding: 15px;
+        h4 {
+          font-size: 15px;
+          padding-bottom: 15px;
+        }
+        .details {
+          display: flex;
+          justify-content: space-between;
+          .small {
+            display: inline-flex;
+          }
+          span {
+            color: var(--yellow-color);
+            font-weight: 800;
+            flex-basis: 2;
+          }
+          p {
+            font-size: 13px;
+            color: var(--second-color);
+            margin-left: 10px;
+          }
+          i {
+            color: var(--second-color);
+            margin-left: 10px;
+          }
+        }
+      }
     }
   }
 }
@@ -454,6 +490,37 @@ form {
     justify-content: center;
     gap: 30px;
     margin-top: 50px;
+    figure {
+      position: relative;
+      display: flex;
+      figcaption {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 1);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 17%;
+        padding: 15px;
+        h4 {
+          font-size: 15px;
+          padding-bottom: 15px;
+        }
+        .details {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            color: var(--yellow-color);
+            text-transform: capitalize;
+            font-weight: 800;
+          }
+          i {
+            color: var(--main-color);
+            margin-left: 15px;
+          }
+        }
+      }
+    }
   }
 }
 /* end agent */
