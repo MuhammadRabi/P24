@@ -119,6 +119,7 @@ button {
 
 @media (max-width: 767px) {
   .main-heading {
+    text-align: center;
     width: 80%;
     margin: auto;
   }
@@ -179,6 +180,11 @@ header .logo {
   text-transform: capitalize;
 }
 
+header nav {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,8 +197,23 @@ header nav ul {
           align-items: center;
 }
 
+@media (max-width: 991px) {
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 header nav ul li:nth-of-type(6) {
   padding-left: 100px;
+}
+
+@media (max-width: 991px) {
+  header nav ul li:nth-of-type(6) {
+    padding-left: 0;
+  }
 }
 
 header nav a {
@@ -213,21 +234,71 @@ header nav a.active, header nav a:hover {
 }
 
 @media (max-width: 991px) {
+  header nav a {
+    margin: 15px 2px 0 2px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
   header nav {
     display: none;
   }
 }
 
-.help {
+header nav.active {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
+  text-align: center;
+  z-index: 9;
+}
+
+header .menu-toggle {
+  color: var(--main-color);
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 9;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  header .menu-toggle {
+    display: block;
+  }
+}
+
+header .menu-toggle i:nth-child(1) {
+  display: block;
+}
+
+header .menu-toggle i:nth-child(2) {
+  display: none;
+}
+
+header .menu-toggle.active i:nth-child(1) {
+  display: none;
+}
+
+header .menu-toggle.active i:nth-child(2) {
+  display: block;
 }
 
 /* end header */
@@ -838,18 +909,15 @@ footer .hero-footer:before {
   }
 }
 
-footer form i {
-  right: 25px;
-}
-
 footer form .main-input {
   width: 450px;
   padding: 15px 45px 15px 25px;
+  border-radius: 5px;
 }
 
 @media (max-width: 767px) {
   footer form .main-input {
-    width: 50%;
+    width: 100%;
   }
 }
 

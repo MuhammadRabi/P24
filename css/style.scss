@@ -109,8 +109,10 @@ button {
 
 .main-heading {
   text-align: left;
+
   width: 40%;
   @include mobile {
+    text-align: center;
     width: 80%;
     margin: auto;
   }
@@ -160,13 +162,20 @@ header {
     text-transform: capitalize;
   }
   nav {
+    transition: $mainTransition;
     ul {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include mobileandMedium {
+        flex-direction: column;
+      }
       li {
         &:nth-of-type(6) {
           padding-left: 100px;
+          @include mobileandMedium {
+            padding-left: 0;
+          }
         }
       }
     }
@@ -184,17 +193,57 @@ header {
       &:hover {
         background-color: var(--yellow-color);
       }
+      @include mobileandMedium {
+        margin: 15px 2px 0 2px;
+        font-size: 16px;
+      }
     }
     @include mobileandMedium {
       display: none;
     }
+    &.active {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 1);
+      text-align: center;
+      z-index: 9;
+    }
+  }
+  .menu-toggle {
+    color: var(--main-color);
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    z-index: 9;
+    transition: $mainTransition;
+    @include mobileandMedium {
+      display: block;
+    }
+
+    i:nth-child(1) {
+      display: block;
+    }
+    i:nth-child(2) {
+      display: none;
+    }
+    &.active i:nth-child(1) {
+      display: none;
+    }
+    &.active i:nth-child(2) {
+      display: block;
+    }
   }
 }
-.help {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 /* end header */
 
 /* start hero area */
@@ -620,14 +669,12 @@ footer {
     }
   }
   form {
-    i {
-      right: 25px;
-    }
     .main-input {
       width: 450px;
       padding: 15px 45px 15px 25px;
+      border-radius: 5px;
       @include mobile {
-        width: 50%;
+        width: 100%;
       }
     }
   }
