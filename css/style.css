@@ -376,6 +376,12 @@ header .menu-toggle.active i:nth-child(2) {
 }
 
 @media (max-width: 767px) {
+  .hero-area .head-contact span {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
   .hero-area .head-contact {
     width: 100%;
   }
@@ -390,6 +396,12 @@ header .menu-toggle.active i:nth-child(2) {
 .hero-area .head-contact i {
   color: var(--background-white);
   font-size: 32px;
+}
+
+@media (max-width: 767px) {
+  .hero-area .head-contact i {
+    font-size: 24px;
+  }
 }
 
 form {

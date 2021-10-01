@@ -295,6 +295,11 @@ header {
     background-color: var(--yellow-color);
     color: var(--main-color);
     padding: 15px 10px;
+    span {
+      @include mobile {
+        font-size: 13px;
+      }
+    }
     @include mobile {
       width: 100%;
     }
@@ -304,6 +309,9 @@ header {
     i {
       color: var(--background-white);
       font-size: 32px;
+      @include mobile {
+        font-size: 24px;
+      }
     }
   }
 }
