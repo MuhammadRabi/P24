@@ -134,7 +134,7 @@ h3,
 h4,
 h5,
 h6 {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   text-transform: capitalize;
 }
 
@@ -167,13 +167,13 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @include mobileandMedium {
+      @include uptoLarge {
         flex-direction: column;
       }
       li {
         &:nth-of-type(6) {
           padding-left: 100px;
-          @include mobileandMedium {
+          @include uptoLarge {
             padding-left: 0;
           }
         }
@@ -193,12 +193,12 @@ header {
       &:hover {
         background-color: var(--yellow-color);
       }
-      @include mobileandMedium {
+      @include uptoLarge {
         margin: 15px 2px 0 2px;
         font-size: 16px;
       }
     }
-    @include mobileandMedium {
+    @include uptoLarge {
       display: none;
     }
     &.active {
@@ -224,8 +224,7 @@ header {
     cursor: pointer;
     display: none;
     z-index: 9;
-    transition: $mainTransition;
-    @include mobileandMedium {
+    @include uptoLarge {
       display: block;
     }
 
@@ -292,12 +291,15 @@ header {
     justify-content: space-around;
     align-items: center;
     font-weight: 600;
-    width: 35%;
+    width: 40%;
     background-color: var(--yellow-color);
     color: var(--main-color);
     padding: 15px 10px;
     @include mobile {
       width: 100%;
+    }
+    @include mediumScreens {
+      width: 50%;
     }
     i {
       color: var(--background-white);
@@ -535,20 +537,30 @@ form {
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;
   .service-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    width: 100%;
+    display: flex;
     justify-content: space-between;
-    gap: 50px;
-    margin-top: 50px;
-    @include mobile {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    align-items: center;
+    @include mobileandMedium {
+      flex-direction: column;
     }
-    .service-text p {
-      font-size: 13px;
-      line-height: 1.8;
-      margin-bottom: 10px;
-      @include mobile {
-        padding-right: 25px;
+
+    figure {
+      margin: 20px 0;
+      width: 50%;
+      @include mobileandMedium {
+        width: 100%;
+      }
+    }
+    .service-text {
+      width: 45%;
+      @include mobileandMedium {
+        width: 100%;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 25px;
       }
     }
   }
@@ -691,6 +703,8 @@ footer {
     }
     .footer-sec {
       flex-basis: 1;
+      margin-bottom: 50px;
+
       &:nth-of-type(1) {
         flex-basis: 30%;
         p {
@@ -700,6 +714,7 @@ footer {
       h5 {
         color: var(--second-color);
         text-transform: uppercase;
+        padding-bottom: 15px;
       }
       a {
         display: block;

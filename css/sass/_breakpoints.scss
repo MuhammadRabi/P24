@@ -24,10 +24,22 @@
   }
 }
 
-@mixin largeScreens {
+@mixin lgScreens {
   @media (min-width: 992px) {
     @content;
   }
 }
 
-// version 1.20
+@mixin uptoLarge {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin xlScreens {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// version 1.30
