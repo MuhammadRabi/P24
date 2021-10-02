@@ -400,7 +400,7 @@ header .menu-toggle.active i:nth-child(2) {
 
 @media (max-width: 767px) {
   .hero-area .head-contact i {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -430,7 +430,6 @@ form .main-input {
   padding: 25px 65px 25px 45px;
   border: 1px solid transparent;
   border-radius: 5px 0 0 5px;
-  outline: none;
   width: 400px;
 }
 
@@ -1009,4 +1008,28 @@ footer .footer-lists .footer-sec a {
 }
 
 /* footer */
+/* start scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: -100%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 36px;
+  color: var(--yellow-color);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.scroll-to-top:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.scroll-to-top.active {
+  right: 25px;
+}
+
+/* end scroll to top */
 /*# sourceMappingURL=style.css.map */
