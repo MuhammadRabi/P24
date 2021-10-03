@@ -1,0 +1,34 @@
+/* start services */
+.services {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  .service-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobileandMedium {
+      flex-direction: column;
+    }
+
+    figure {
+      margin: 20px 0;
+      width: 50%;
+      @include mobileandMedium {
+        width: 100%;
+      }
+    }
+    .service-text {
+      width: 45%;
+      @include mobileandMedium {
+        width: 100%;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+/* end services */

@@ -1,0 +1,37 @@
+/* start add */
+.add {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    &:nth-of-type(2) {
+      flex-direction: row-reverse;
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+    figure {
+      flex-basis: 45%;
+    }
+    .text-box {
+      flex-basis: 45%;
+      h3 {
+        padding-top: 20px;
+        font-size: 25px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.8;
+      }
+    }
+  }
+}
+
+/* end add*/

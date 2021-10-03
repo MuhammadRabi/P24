@@ -1,0 +1,70 @@
+/* start how */
+
+.how {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  .how-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 30px;
+    .how-box {
+      color: var(--main-color);
+      position: relative;
+      margin: 50px 0;
+      padding: 90px 30px 50px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: $mainTransition;
+      box-shadow: 1px 1px 10px 1px #eeeff1;
+      overflow: hidden;
+      &:nth-of-type(1):before {
+        content: "01";
+      }
+      &:nth-of-type(2):before {
+        content: "02";
+      }
+      &:nth-of-type(3):before {
+        content: "03";
+      }
+      &:before {
+        position: absolute;
+        top: -62px;
+        left: -45px;
+        color: var(--main-color);
+        -webkit-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        font-size: 140px;
+        font-weight: 800;
+      }
+      &:hover {
+        background-color: var(--yellow-color);
+        color: var(--background-white);
+        &:before {
+          color: var(--background-white);
+        }
+        & a {
+          color: var(--background-white);
+        }
+      }
+      h4 {
+        text-transform: capitalize;
+        padding: 15px 10px;
+        font-size: 18px;
+      }
+      p {
+        padding: 10px 25px 30px;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+      a {
+        display: block;
+        padding-left: 29px;
+        text-transform: capitalize;
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+/* end how */
