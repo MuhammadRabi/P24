@@ -1,3 +1,8 @@
+@use "../components/variables" as *;
+@use "../components/mixins" as *;
+@use "../components/breakpoints" as *;
+@use "../components/buttons" as *;
+
 /* start agent */
 .agents {
   padding-top: $sectionPadding;

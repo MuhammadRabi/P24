@@ -1,21 +1,18 @@
-/* import major sass files */
+/* use major sass files */
 
-@import "components/variables";
-@import "components/mixins";
-@import "components/breakpoints";
-@import "components/buttons";
+@use "components/variables";
+@use "components/mixins";
+@use "components/breakpoints";
+@use "components/buttons";
 
-/* import sections */
-@import "sections/base";
-@import "sections/header";
-@import "sections/stats";
-@import "sections/rent";
-@import "sections/how";
-@import "sections/services";
-@import "sections/agents";
-@import "sections/add";
-@import "sections/footer";
-@import "sections/scroll";
-
-// sass structure
-// sass structure
+/* use sections */
+@use "sections/base";
+@use "sections/header";
+@use "sections/stats";
+@use "sections/rent";
+@use "sections/how";
+@use "sections/services";
+@use "sections/agents";
+@use "sections/add";
+@use "sections/footer";
+@use "sections/scroll";
