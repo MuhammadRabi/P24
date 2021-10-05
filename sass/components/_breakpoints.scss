@@ -57,6 +57,11 @@
     @content;
   }
 }
+@mixin medium_and_large {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
 
 @mixin xlScreens {
   @media (min-width: 1200px) {

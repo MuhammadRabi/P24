@@ -462,7 +462,7 @@ form input[type=submit] {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 17%;
+  height: 100px;
   padding: 15px;
 }
 .rent .rent-items figure figcaption h4 {
@@ -789,6 +789,4 @@ footer .footer-lists .footer-sec a {
 
 /* end scroll to top */
 /* use major sass files */
-/* use sections */
-
-/*# sourceMappingURL=style.css.map */
+/* use sections *//*# sourceMappingURL=style.css.map */
