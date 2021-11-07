@@ -22,6 +22,7 @@
   --background-white: #fff;
   --background-dark: #f6f5f4;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -47,6 +48,7 @@ a {
 
 .img-fluid {
   max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -55,6 +57,7 @@ button {
   margin-top: 25px;
   cursor: pointer;
 }
+
 /* end global rules */
 
 .special-heading {
@@ -111,7 +114,7 @@ h4,
 h5,
 h6 {
   padding-bottom: 20px;
-  text-transform: capitalize;
+  text-transform: $capitalize;
 }
 
 body {

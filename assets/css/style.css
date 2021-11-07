@@ -72,6 +72,7 @@ a {
 
 .img-fluid {
   max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -789,4 +790,6 @@ footer .footer-lists .footer-sec a {
 
 /* end scroll to top */
 /* use major sass files */
-/* use sections *//*# sourceMappingURL=style.css.map */
+/* use sections */
+
+/*# sourceMappingURL=style.css.map */
